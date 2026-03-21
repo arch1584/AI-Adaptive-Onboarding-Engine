@@ -1,0 +1,145 @@
+/* 🌐 Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.card {
+  background: #020617;
+  padding: 35px;
+  border-radius: 16px;
+  width: 700px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+/* About Section */
+.about {
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+/* Upload */
+.uploadBox {
+  border: 1px solid #334155;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  background: #020617;
+}
+
+/* Button */
+.button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* Loader */
+.loader {
+  margin: 20px auto;
+  width: 35px;
+  height: 35px;
+  border: 4px solid #334155;
+  border-top: 4px solid #6366f1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Results */
+.results {
+  margin-top: 25px;
+}
+
+.section {
+  margin-bottom: 15px;
+}
+
+.section h3 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Score */
+.scoreBox {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.scoreNumber {
+  font-size: 34px;
+  font-weight: 700;
+  color: #22c55e;
+}
+
+/* Progress */
+.progressContainer {
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 18px;
+  margin-top: 10px;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  text-align: center;
+  font-size: 11px;
+  color: #022c22;
+}
+
+/* Learning */
+.learningCard {
+  background: #0f172a;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

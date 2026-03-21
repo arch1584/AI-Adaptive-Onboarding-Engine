@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 
 # 🔹 CHANGE THESE VALUES
 DB_USER = "postgres"
-DB_PASSWORD = "root"
+DB_PASSWORD = "password"
 DB_HOST = "localhost"
 DB_PORT = "5432"
 DB_NAME = "adaptive_onboarding_ai"

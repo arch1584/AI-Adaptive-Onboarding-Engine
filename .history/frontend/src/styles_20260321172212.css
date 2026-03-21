@@ -1,0 +1,22 @@
+/* 🧠 Container */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* 🧾 Bigger Dashboard Card */
+.card {
+  width: 900px; /* 🔥 increased width */
+  max-width: 95%;
+  background: rgba(2, 6, 23, 0.75);
+  backdrop-filter: blur(25px);
+  padding: 40px;
+  border-radius: 20px;
+
+  box-shadow:
+    0 0 80px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(99, 102, 241, 0.2); /* subtle glow */
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}

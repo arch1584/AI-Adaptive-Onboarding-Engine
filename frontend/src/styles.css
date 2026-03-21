@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
+/* 🌑 Background */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0b1120;
+  color: #e2e8f0;
+}
+
+/* Center layout */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 🔥 Main Card */
+.card {
+  width: 95%;
+  max-width: 1300px;
+  background: #111827;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  border: 1px solid #1f2937;
+}
+
+/* Header */
+.header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  color: #9ca3af;
+  margin-bottom: 30px;
+}
+
+/* About */
+.about {
+  background: #1f2937;
+  padding: 18px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/* Upload */
+.uploadGrid {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.uploadBox {
+  flex: 1;
+  border: 1px solid #374151;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  background: #020617;
+}
+
+/* Button */
+.button {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Loader */
+.loader {
+  margin: 25px auto;
+  width: 32px;
+  height: 32px;
+  border: 4px solid #374151;
+  border-top: 4px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Results */
+.results {
+  margin-top: 40px;
+}
+
+/* Score */
+.scoreBox h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+}
+
+.progressContainer {
+  background: #374151;
+  height: 14px;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.progressBar {
+  height: 100%;
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+/* Insight */
+.insightBox {
+  background: #1e3a8a;
+  padding: 18px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+/* Grid */
+.grid {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.section h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Recommendation */
+.recommendationBox {
+  background: #78350f;
+  padding: 18px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+/* Learning */
+.learningCard {
+  background: #1f2937;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

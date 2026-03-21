@@ -1,0 +1,122 @@
+/* 🌈 Global */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2b2b4a);
+  color: white;
+}
+
+/* 🧠 Main Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* 🧾 Card */
+.card {
+  background: #111827;
+  padding: 30px;
+  border-radius: 16px;
+  width: 600px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+/* 🏷 Title */
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* 📂 Upload */
+.uploadBox {
+  border: 2px dashed #374151;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  background: #1f2937;
+}
+
+/* 🔘 Button */
+.button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* ⏳ Loader */
+.loader {
+  margin: 20px auto;
+  width: 40px;
+  height: 40px;
+  border: 5px solid #374151;
+  border-top: 5px solid #8b5cf6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* 📊 Result Section */
+.results {
+  margin-top: 20px;
+}
+
+/* 🧩 Section */
+.section {
+  margin-bottom: 15px;
+}
+
+/* 📚 Learning Card */
+.learningCard {
+  background: #1f2937;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* 📈 Progress Bar */
+.progressContainer {
+  background: #374151;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  text-align: center;
+  color: black;
+  font-size: 12px;
+}
+
+/* 🧠 Score Box */
+.scoreBox {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.scoreNumber {
+  font-size: 32px;
+  font-weight: bold;
+  color: #22c55e;
+}
+
+/* 🔄 Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -3,12 +3,12 @@ from sqlalchemy.orm import sessionmaker
 
 # 🔹 CHANGE THESE VALUES
 DB_USER = "postgres"
-DB_PASSWORD = "root"
+DB_PASSWORD = "password"
 DB_HOST = "localhost"
 DB_PORT = "5432"
-DB_NAME = "adaptive_onboarding_ai"
+DB_NAME = "onboarding_ai"
 
-DATABASE_URL = "postgresql://postgres:root@localhost:5432/adaptive_onboarding_ai"
+DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
 # 🔹 Create engine
 engine = create_engine(DATABASE_URL)

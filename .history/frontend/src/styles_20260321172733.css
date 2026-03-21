@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.card {
+  width: 850px;
+  background: white;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.about {
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.uploadGrid {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.uploadBox {
+  flex: 1;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #1d4ed8;
+}
+
+.loader {
+  margin: 20px auto;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.results {
+  margin-top: 30px;
+}
+
+.section {
+  margin-bottom: 15px;
+}
+
+.scoreBox {
+  margin-bottom: 20px;
+}
+
+.scoreNumber {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.progressContainer {
+  background: #e2e8f0;
+  border-radius: 10px;
+  height: 14px;
+  margin-top: 8px;
+}
+
+.progressBar {
+  height: 100%;
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+.learningCard {
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
