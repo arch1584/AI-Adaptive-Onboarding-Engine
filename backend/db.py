@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-# 🔹 CHANGE THESE VALUES
+
 DB_USER = "postgres"
 DB_PASSWORD = "root"
 DB_HOST = "localhost"

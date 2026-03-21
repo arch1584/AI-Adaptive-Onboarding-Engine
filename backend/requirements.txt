@@ -3,6 +3,6 @@ fastapi
 PyPDF2
 uvicorn
 python-multipart
-google-generativeai
+google-genai
 python-dotenv
 networkx
