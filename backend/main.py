@@ -1,8 +1,8 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 import PyPDF2
 
-from utils import extract_skills, generate_learning_path
+from utils import llm_extract_skills, parse_skills_response, compare_skills, generate_learning_path, DAG
 
 app = FastAPI()
 
@@ -31,25 +31,34 @@ def extract_text_from_pdf(file: UploadFile):
 
 # 🚀 MAIN API
 @app.post("/analyze")
-async def analyze(resume: UploadFile = File(...), jd: UploadFile = File(...)):
+async def analyze(resume: UploadFile = File(...), jd: UploadFile = File(...), onboarding_weeks: int = Form(8)):
 
     # Extract text
     resume_text = extract_text_from_pdf(resume)
     jd_text = extract_text_from_pdf(jd)
 
-    # Extract skills
-    resume_skills = extract_skills(resume_text)
-    jd_skills = extract_skills(jd_text)
+    resume_raw    = llm_extract_skills(resume_text, "resume")
+    jd_raw        = llm_extract_skills(jd_text, "jd")
 
-    # Find missing skills
-    missing_skills = list(set(jd_skills) - set(resume_skills))
+    resume_skills = parse_skills_response(resume_raw)
+    jd_skills     = parse_skills_response(jd_raw)
 
-    # Generate learning path
-    learning_path = generate_learning_path(missing_skills)
+    gaps          = compare_skills(resume_skills, jd_skills)
+    gaps          = compare_skills(resume_skills, jd_skills)
+    learning_path = generate_learning_path(gaps, onboarding_weeks=onboarding_weeks)
+
+    trace = [
+        {"step": "resume_parsing",    "output": f"Extracted {len(resume_skills)} skills from resume"},
+        {"step": "jd_parsing",        "output": f"Extracted {len(jd_skills)} skills from JD"},
+        {"step": "gap_analysis",      "output": f"Identified {len(gaps)} skill gaps"},
+        {"step": "dag_traversal",     "output": f"Resolved prerequisites via {len(DAG.nodes)}-node skill graph"},
+        {"step": "path_generation",   "output": f"Generated {len(learning_path)} modules over {onboarding_weeks} weeks"},
+    ]
 
     return {
-        "resume_skills": resume_skills,
-        "jd_skills": jd_skills,
-        "missing_skills": missing_skills,
-        "learning_path": learning_path,
+        "resume_skills":  resume_skills,
+        "jd_skills":      jd_skills,
+        "gaps":           gaps,
+        "learning_path":  learning_path,
+        "trace":          trace,
     }
