@@ -91,7 +91,7 @@ AI-Adaptive-Onboarding-Engine/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourteam/AI-Adaptive-Onboarding-Engine.git
+git clone https://github.com/arch1584/AI-Adaptive-Onboarding-Engine.git
 cd AI-Adaptive-Onboarding-Engine
 ```
 
